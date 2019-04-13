@@ -33,6 +33,7 @@ h1, h2, h3, h4, p {
 
 .save, .cancel {
     float: right;
+    font-family: 'Quicksand', serif;
 }
 
 .post-form textarea, .post-form input {
