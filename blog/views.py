@@ -14,7 +14,13 @@ def post_detail(request, pk):
     return render(request, 'blog/post_detail.html', {'post': post})
 
 def post_new(request):
-    if request.method == "POST":
+    print(request)
+    print(request.POST)
+    print(request.GET)
+    if "cancel" in request.POST:
+        print('here')
+        return redirect('blog/post_list.html')
+    elif request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
