@@ -1,6 +1,6 @@
 h1 a, h2 a {
     color: #C25100;
-    font-family: 'Quicksand';
+    font-family: 'Patrick Hand', cursive;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 }
 
 h1, h2, h3, h4, p {
-    font-family: 'Quicksand', serif;
+    font-family: 'Patrick Hand', cursive;
 }
 
 .date {
@@ -33,7 +33,7 @@ h1, h2, h3, h4, p {
 
 .save, .cancel {
     float: right;
-    font-family: 'Quicksand', serif;
+    font-family: 'Patrick Hand', cursive;
 }
 
 .post-form textarea, .post-form input {
@@ -53,4 +53,13 @@ h1, h2, h3, h4, p {
 
 .post h2 a, .post h2 a:visited {
     color: #000000;
+}
+
+h2.title, a.thumbs-up {
+    display: inline-block;
+}
+
+a.thumbs-up {
+    float: right;
+    margin-top: 20px;
 }

@@ -4,7 +4,16 @@
     {% for post in posts %}
         <div class="post">
             <p>published: {{ post.published_date }}</p>
-            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <div>
+                <h2 class="title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                <form method="POST">{% csrf_token %}
+                    {{ form.as_p }}
+                    <a class="btn btn-default thumbs-up" href="{% url 'post_list' %}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+                </form>
+                {% if post.likes > 0 %}
+                    <p>+ {{ post.likes }}</p>
+                {% endif %}
+            </div>
             <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
